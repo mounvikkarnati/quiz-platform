@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Quiz Registration</title>
+  <link rel="stylesheet" href="css/register.css" />
+  <link rel="icon" type="image/png" href="/image/top.png">
+
+</head>
+
+<body>
+  <!-- Loader -->
+ 
+
+  <div class="container">
+    <h1>⚡️Photon Club-VITAP</h1>
+    <h2>Quiz Registration</h2>
+
+    <form id="registrationForm">
+      <input type="text" id="name" placeholder="Full Name" required />
+
+      <input type="email" id="email" placeholder="Email Address" required />
+
+      <input type="text" id="roll" placeholder="Roll Number" required />
+
+      <input type="text" id="college" placeholder="College / School Name" required />
+
+      <button type="submit" class="start-btn">Proceed to Quiz</button>
+    </form>
+
+    <p class="note">
+      ⚠️ Please ensure your details are correct. Only one attempt is allowed.
+    </p>
+  </div>
+
+  <script>
+    // Hide loader
+    window.addEventListener("load", () => {
+      document.getElementById("loader").style.display = "none";
+    });
+
+    // Prevent multiple attempts
+    if (localStorage.getItem("quizSubmitted")) {
+      alert("You have already completed the quiz.");
+      window.location.href = "index.html";
+    }
+
+    // Registration handling
+    document.getElementById("registrationForm").addEventListener("submit", function (e) {
+      e.preventDefault();
+
+      const name = document.getElementById("name").value.trim();
+      const email = document.getElementById("email").value.trim();
+      const roll = document.getElementById("roll").value.trim();
+      const college = document.getElementById("college").value.trim();
+
+      if (!name || !email || !roll || !college) {
+        alert("Please fill all fields.");
+        return;
+      }
+
+      // Save data for quiz pages
+      sessionStorage.setItem("name", name);
+      sessionStorage.setItem("email", email);
+      sessionStorage.setItem("roll", roll);
+      sessionStorage.setItem("college", college);
+
+      // Redirect to quiz
+      window.location.href = "start-page/round-1-start.html";
+    });
+  </script>
+</body>
+</html>

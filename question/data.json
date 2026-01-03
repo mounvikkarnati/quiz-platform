@@ -1,0 +1,32 @@
+{
+  "totalQuestions": 3,
+  "questions": [
+    {
+      "id": 1,
+      "category": "Programming",
+      "difficulty": "Easy",
+      "question": "What is the time complexity of accessing an element in an array by index?",
+      "options": ["O(1)", "O(n)", "O(log n)", "O(n log n)"],
+      "correct": "O(1)",
+      "explanation": "Array elements are stored in contiguous memory locations, allowing constant time access."
+    },
+    {
+      "id": 2,
+      "category": "Programming",
+      "difficulty": "Easy",
+      "question": "Which data structure follows the FIFO principle?",
+      "options": ["Stack", "Queue", "Tree", "Graph"],
+      "correct": "Queue",
+      "explanation": "FIFO means First In First Out, which is followed by a Queue."
+    },
+    {
+      "id": 3,
+      "category": "Programming",
+      "difficulty": "Easy",
+      "question": "Which keyword is used to inherit a class in Java?",
+      "options": ["implements", "inherits", "extends", "super"],
+      "correct": "extends",
+      "explanation": "The 'extends' keyword is used to inherit a class in Java."
+    }
+  ]
+}

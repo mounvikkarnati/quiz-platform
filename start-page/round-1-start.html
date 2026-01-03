@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Quiz Instructions</title>
+  <link rel="stylesheet" href="/css/startpage.css" />
+  <link rel="icon" type="image/png" href="/image/top.png">
+
+</head>
+
+<body>
+  <header class="top-header">
+  <div class="nav-container">
+    <img src="/image/nav.png" alt="Photon Club Logo" class="nav-logo">
+
+    <h1 class="nav-title">
+      Photon Club Debugg Event
+    </h1>
+  </div>
+</header>
+
+  <div class="container">
+    <header>
+      <h1>Single Round Quiz</h1>
+    </header>
+
+    <section class="rules">
+      <h2>Rules</h2>
+      <ul>
+        <li>Total Questions: <strong>30</strong></li>
+        <li>Time per question: <strong>1 minute</strong></li>
+        <li>Total time: <strong>35 minutes</strong></li>
+        <li>Each correct answer: <strong>2 marks</strong></li>
+        <li>No negative marking</li>
+      </ul>
+    </section>
+
+    <section class="start-quiz">
+      <button id="startQuizBtn">Start Quiz</button>
+    </section>
+  </div>
+
+  <script>
+    document.getElementById("startQuizBtn").addEventListener("click", () => {
+      // store quiz start time
+      sessionStorage.setItem("quizStartTime", Date.now());
+      window.location.href = "/question/round-1-question.html";
+    });
+  </script>
+</body>
+</html>

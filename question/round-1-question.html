@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Quiz</title>
+  <link rel="stylesheet" href="/css/quiz.css" />
+  <link rel="icon" type="image/png" href="/image/top.png">
+
+</head>
+
+<body>
+  <header class="top-header">
+  <div class="nav-container">
+    <img src="/image/nav.png" alt="Photon Club Logo" class="nav-logo">
+
+    <h1 class="nav-title">
+      Photon Club Debugg Event
+    </h1>
+  </div>
+</header>
+
+  <div class="quiz-container">
+    <header class="quiz-header">
+      <div>Total Time Left: <span id="globalTimer">35:00</span></div>
+      <div>Question Time: <span id="questionTimer">01:00</span></div>
+    </header>
+
+    <main>
+      <h2 id="questionText">Loading question...</h2>
+      <ul id="optionsList"></ul>
+    </main>
+
+    <footer>
+      <button id="nextBtn">Next</button>
+    </footer>
+    <div>
+  <p class="copy"
+     style="
+       margin-top: 90px;
+       padding: 10px 0;
+       text-align: center;
+       font-size: 14px;
+       color: #9ca3af;
+       background-color: #0f172a;
+       border-top: 1px solid #1f2937;
+     ">
+    © 2026 Photon Club Debugg Event
+  </p>
+</div>
+
+  </div>
+<script src="/js/quiz.js"></script>
+
+  <script src="/js/quiz-timer.js"></script>
+</body>
+</html>

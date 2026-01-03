@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title> Quiz - Welcome</title>
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="icon" type="image/png" href="/image/top.png">
+
+  </head>
+  <body>
+  
+    <div class="container">
+      <h1>Photon Club-VITAP</h1>
+      <h2>Welcome to the DeBugg Event!</h2>
+      <div class="rules">
+        <h3>Rules:</h3>
+        <ul>
+          <li>There are <strong>30 questions</strong> in total.</li>
+          <li>Each Question has <strong>1 min</strong>.</li>
+          <li>Each Question Contains <strong>2 Marks</strong>.</li>
+          <li>Time limits vary for each round to make it exciting!</li>
+        </ul>
+      </div>
+    <a href="register.html" class="start-btn">Start Quiz</a>
+      <div class="conducted-by">
+        <p>Conducted by: Mounvik Karnati</p>
+      </div>
+    </div>
+    <footer class="footer">
+      <p>
+        Developed with ❤️ by
+        <a href="https://mounvikkarnati.ct.ws" target="_blank">Mounvik Karnati</a>
+      </p>
+    </footer>
+
+    <script>
+  // Reset quiz state when user lands on home page
+  localStorage.removeItem("quizSubmitted");
+
+  // Optional: also clear old session data
+  sessionStorage.removeItem("finalScore");
+  sessionStorage.removeItem("correctCount");
+  sessionStorage.removeItem("incorrectCount");
+  sessionStorage.removeItem("totalQuestions");
+  sessionStorage.removeItem("autoSubmitted");
+</script>
+
+    <script src="/js/script.js"></script>
+  </body>
+</html>

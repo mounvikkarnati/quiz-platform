@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Time Ended – Quiz Result</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      background: #0f172a;
+      font-family: Arial, sans-serif;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #ffffff;
+    }
+
+    .container {
+      background: #111827;
+      padding: 35px;
+      border-radius: 12px;
+      width: 420px;
+      text-align: center;
+      box-shadow: 0 0 25px rgba(0, 0, 0, 0.6);
+    }
+
+    h1 {
+      color: #22c55e;
+      margin-bottom: 20px;
+    }
+
+    .result {
+      font-size: 16px;
+      line-height: 1.8;
+      color: #e5e7eb;
+    }
+
+    .note {
+      margin-top: 20px;
+      font-size: 13px;
+      color: #9ca3af;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <h1>🎉 Quiz Completed!</h1>
+
+    <div class="result">
+      <strong>Score:</strong>
+      <span id="score"></span>
+      <br>
+
+      <strong>Correct:</strong>
+      <span id="correct"></span>
+      <br>
+
+      <strong>Incorrect:</strong>
+      <span id="incorrect"></span>
+    </div>
+
+    <p class="note">
+      ⏰ Quiz ended due to time limit.
+    </p>
+  </div>
+
+  <script>
+    // Read values stored during finishQuiz()
+    const score = sessionStorage.getItem("finalScore");
+    const correct = sessionStorage.getItem("correctCount");
+    const incorrect = sessionStorage.getItem("incorrectCount");
+    const total = sessionStorage.getItem("totalQuestions");
+
+    document.getElementById("score").textContent =
+      `${score} / ${total * 2}`;
+
+    document.getElementById("correct").textContent = correct;
+    document.getElementById("incorrect").textContent = incorrect;
+  </script>
+</body>
+</html>
